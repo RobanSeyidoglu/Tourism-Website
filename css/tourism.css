@@ -1,75 +1,149 @@
 /* Start Variables */
 :root {
-    --main-color: #19c8fa;
-    --transparent-color: rgb(15 116 143 / 70%);
-    --section-padding: 100px;
-    --main-text-color: #777;
-  }
-  /* End Variables */
-  /* Start Global Rules */
-  * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    font-family: "Open Sans", sans-serif;
-  }
-  ul {
-    list-style: none;
-  }
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 100px;
+  --main-text-color: #777;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  direction: rtl;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 750px;
   }
-  /* Small */
-  @media (min-width: 768px) {
-    .container {
-      width: 750px;
-    }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
   }
-  
-  @media (min-width: 992px) {
-    .container {
-      width: 970px;
-    }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
-  /* Large */
-  @media (min-width: 1200px) {
-    .container {
-      width: 1170px;
-    }
-  }
-  /* End Global Rules */
-  /* Start Header */
- .header{
+}
+/* End Global Rules */
+/* Start Header */
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 97px;
+}
+header .container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #a2a2a2;
+  bottom: 0;
+  width: calc(100% - 30px);
+  left: 15px;
+}
+header .container .logo img {
+  max-height: 150px;
+}
+header .container nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+header .container nav ul {
+  display: flex;
+  gap: 20px;
+}
+header .container nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+header .container nav ul li .active {
+  color: #1b79f3;
+}
+header .container nav i {
+  display: none;
+  font-size: 22px;
+}
+header nav ul li a.active,
+header nav ul li a:hover {
+  color: #1b79f3;
+  border-bottom: 1px solid var(--main-color);
+  padding-bottom: 15px;
+}
+@media (max-width: 768px) {
+  header .container nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 50px;
+    padding: 20px;
     position: absolute;
-    left: 0;
+    top: 100%;
+    right: 0;
     width: 100%;
-    z-index: 2;
- }
- .header .container{
+    height: 60vh;
+    background-color: black;
+  }
+  header .container nav ul .trans {
+    transition: background-color 1s ease;
+    -webkit-transition: background-color 1s ease;
+    -moz-transition: background-color 1s ease;
+    -ms-transition: background-color 1s ease;
+    -o-transition: background-color 1s ease;
+  }
+  header .container nav {
+    padding-top: 40px;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  header .container nav i {
+    padding-bottom: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    min-height: 97px;
-  
- }
- .header .container .logo{
-display: flex;
- }
- .header .container nav{
-
- }
- .header .container nav ul{
-
- }
-  /* End Header */
+    cursor: pointer;
+  }
+  header .container nav ul li a {
+    color: white;
+  }
+  header .container .logo img {
+    max-height: 100px;
+  }
+  header nav ul li a.active,
+  header nav ul li a:hover {
+    color: #1b79f3;
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom: 15px;
+  }
+}
+/* End Header */
