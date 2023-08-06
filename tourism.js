@@ -28,5 +28,12 @@ if (getComputedStyle(toggleMenu).display !== "none") {
   menu.style.display = "flex";
   video.style.display = "flex";
 }
-
 // End Header
+// Start video sliding functions
+let imgSource = document.querySelector(".images img ");
+let Timer = setInterval(function () {
+  imgSource.src = `./images/${Math.floor(Math.random() * 7)}.jpg`;
+  console.log(Math.floor(Math.random() * 7));
+}, 3000);
+
+// End video sliding functions
