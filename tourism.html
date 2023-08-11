@@ -13,8 +13,17 @@
     <link rel="stylesheet" href="css/tourism.css" />
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Jomhuria&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Swiper Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
   </head>
   <body>
@@ -33,7 +42,7 @@
         <div class="logo">
           <a href="#" class="logo">
             <img
-              decoding="async"
+              loading="lazy"
               src="././images/LogoSample_ByTailorBrands.jpg"
               alt="Logo"
             />
@@ -42,24 +51,69 @@
       </div>
     </header>
     <!-- End header -->
-    <!-- Start images section -->
-    <div class="images">
-      <img 
-      loading="lazy"
-        src="./images/1.jpg"
-      ></img>
-      <div class="text">
-        <p>مرحبا بكم في</p>
-        <h2>السيَّد للسياحة والسفر</h2>
-        <a href="#about">من نحن</a>
+
+    <!-- Start Slider section -->
+    <section id="slider">
+      <div class="swiper" id="swiper-1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img loading="lazy" src="./images/0.webp" alt="Turkey" />
+            <div class="text">
+              <p>مرحبا بكم في</p>
+              <h2>السيَّد للسياحة والسفر</h2>
+              <a href="#about">من نحن</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img loading="lazy" src="./images/4.webp" alt="Turkey" />
+            <div class="text">
+              <p>مرحبا بكم في</p>
+              <h2>السيَّد للسياحة والسفر</h2>
+              <a href="#about">من نحن</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img loading="lazy" src="./images/5.webp" alt="Turkey" />
+            <div class="text">
+              <p>مرحبا بكم في</p>
+              <h2>السيَّد للسياحة والسفر</h2>
+              <a href="#about">من نحن</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img loading="lazy" src="./images/6.webp" alt="Turkey" />
+            <div class="text">
+              <p>مرحبا بكم في</p>
+              <h2>السيَّد للسياحة والسفر</h2>
+              <a href="#about">من نحن</a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img loading="lazy" src="./images/1.webp" alt="Turkey" />
+            <div class="text">
+              <p>مرحبا بكم في</p>
+              <h2>السيَّد للسياحة والسفر</h2>
+              <a href="#about">من نحن</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
-    </div>
+    </section>
+
     <div class="whatsapp">
-      <a href=""
-        ><i class="fa-brands fa-whatsapp fa-2xl" style="color: #fff"></i
-      ></a>
+      <a href="https://wa.me/+905342081788" target="_blank">
+        <i class="fab fa-whatsapp fa-2xl" style="color: #fff"></i>
+      </a>
     </div>
-    <!-- End images section -->
+    <!-- End slider section -->
+
+    <!-- Start about section -->
+
+    <!-- End about section -->
+
+    <!-- Swiper Library -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="tourism.js"></script>
   </body>
 </html>

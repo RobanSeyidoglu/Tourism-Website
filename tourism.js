@@ -2,15 +2,15 @@
 let toggleMenu = document.querySelector("nav i");
 let menu = document.querySelector("header nav ul");
 let body = document.body;
-let video = document.querySelector(".video");
+let slider = document.querySelector("#slider");
 if (getComputedStyle(toggleMenu).display !== "none") {
   toggleMenu.onclick = function () {
     if (getComputedStyle(menu).display === "flex") {
       menu.style.display = "none";
-      video.style.display = "flex";
+      slider.style.display = "flex";
     } else {
       menu.style.display = "flex";
-      video.style.display = "none";
+      slider.style.display = "none";
     }
   };
   document.addEventListener("click", function (event) {
@@ -21,19 +21,27 @@ if (getComputedStyle(toggleMenu).display !== "none") {
       !(getComputedStyle(toggleMenu).display === "none")
     ) {
       menu.style.display = "none";
-      video.style.display = "flex";
+      slider.style.display = "flex";
     }
   });
 } else if (toggleMenu.style.display === "none") {
   menu.style.display = "flex";
-  video.style.display = "flex";
+  slider.style.display = "flex";
 }
 // End Header
-// Start video sliding functions
-let imgSource = document.querySelector(".images img ");
-let Timer = setInterval(function () {
-  imgSource.src = `./images/${Math.floor(Math.random() * 7)}.jpg`;
-  console.log(Math.floor(Math.random() * 7));
-}, 3000);
-
-// End video sliding functions
+// Start Slider
+new Swiper("#swiper-1", {
+  effect: "fade",
+  speed: 800,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: "#swiper-1 .swiper-pagination",
+    clickable: true,
+  },
+  lazyLoading: true,
+  loop: true,
+});
+// End Slider
