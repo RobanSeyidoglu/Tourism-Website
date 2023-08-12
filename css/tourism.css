@@ -356,7 +356,7 @@ header nav ul li a:hover {
 }
 /*  End about section */
 
-/* Start service section */
+/* Start services section */
 .service {
   display: flex;
   flex-flow: column;
@@ -418,4 +418,4 @@ header nav ul li a:hover {
     width: 90%;
   }
 }
-/* End service section */
+/* End services section */
