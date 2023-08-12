@@ -153,6 +153,9 @@ header nav ul li a:hover {
 /* End Header */
 
 /* Start swiper section */
+#slider {
+  padding-bottom: var(--section-padding);
+}
 .swiper-slide img {
   display: block;
   width: 100%;
@@ -213,6 +216,11 @@ header nav ul li a:hover {
   padding: 5px 18px;
   border: solid 3px #651111;
   line-height: 30px;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
 }
 @media (max-width: 768px) {
   .swiper-slide img {
@@ -255,5 +263,81 @@ header nav ul li a:hover {
 /* End Slider section */
 
 /* Start about section */
+.about .container {
+  direction: ltr;
+  display: flex;
+  justify-content: space-between;
+}
+.about .container .text {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  flex-basis: 170%;
+  padding-left: 50px;
+}
+.about .container .text p:first-child {
+  font-size: 2rem;
+  padding-bottom: 15px;
+  color: #651111;
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
 
+.about:hover .container .text p:first-child {
+  font-size: 3rem;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+.about .container .text h3 {
+  width: fit-content;
+  padding: 0 10px;
+  font-size: 3rem;
+  line-height: 58px;
+  position: relative;
+  text-shadow: 1px 2px 4px #e36262;
+}
+.about:hover .container .text h3 {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.about .container .text p:last-child {
+  font-size: 1.3rem;
+  padding-top: 20px;
+}
+.about .container .image-1 {
+}
+.about .container .image-1 img {
+  display: block;
+  width: 100%;
+  max-height: 50%;
+  object-fit: cover;
+}
+@media (max-width: 992px) {
+  .about .container {
+    flex-flow: column wrap;
+    gap: 50px;
+  }
+  .about .container .image-1 img {
+    width: 100%;
+    height: 50vh;
+  }
+  .about .container .text p:first-child {
+    font-size: 3rem;
+  }
+}
 /*  End about section */
