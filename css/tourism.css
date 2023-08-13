@@ -389,6 +389,7 @@ header nav ul li a:hover {
   }
   .about .container .text p q {
     font-size: 1.2rem;
+    font-weight: 600;
   }
 }
 /*  End about section */
@@ -592,5 +593,46 @@ header nav ul li a:hover {
 }
 /* End travels section */
 /* Start footer  */
-
+footer {
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
+  background-image: url("../images/16.webp");
+  position: relative;
+  background-size: cover;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+footer .container {
+  color: white;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 30px;
+}
+footer .container i {
+  font-size: 6rem;
+}
+footer .container .icon {
+  padding: 10px;
+}
+footer .container p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+footer .container p {
+  text-shadow: -8px 11px 7px black;
+}
+footer .container p span {
+  color: var(--main-color);
+  font-weight: 700;
+  text-shadow: 1px 1px 10px;
+}
 /* End footer  */
