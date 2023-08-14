@@ -432,8 +432,10 @@ header nav ul li a:hover {
   justify-content: space-evenly;
   height: 150px;
   width: 20%;
-  background-color: #807f7f;
+  background-color: #b4afaf;
   border: 1px solid white;
+  transform: scale(0.9);
+  transition: all 0.3s;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -441,9 +443,26 @@ header nav ul li a:hover {
   -o-border-radius: 5px;
   text-decoration: none;
   color: black;
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+.service .serv .srv:hover{
+  transform: scale(1);
+  background-color: #807f7f;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
 }
 .service .serv .srv i {
   display: block;
+
 }
 @media (max-width: 768px) {
   .service .serv {
@@ -455,6 +474,7 @@ header nav ul li a:hover {
   .service .serv .srv {
     width: 90%;
     margin-bottom: 10px;
+    background-color: #807f7f;
   }
 }
 /* End services section */
@@ -495,8 +515,25 @@ header nav ul li a:hover {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  transition: all 0.3s;
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.travels .boxes .box:hover{
   background-color: #128c7e8c;
   box-shadow: 1px 1px 10px 5px #02352f8c;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
 }
 .travels .boxes .box .image-T {
   padding: 10px;
@@ -582,7 +619,14 @@ header nav ul li a:hover {
 @media (max-width: 837px) {
   .travels .boxes .box {
     max-width: 90%;
-  }
+    background-color: #128c7e8c;
+    box-shadow: 1px 1px 10px 5px #02352f8c;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
   .travels .boxes .box .image-T {
     max-width: 100%;
   }
